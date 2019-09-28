@@ -3,16 +3,22 @@ import { render, html } from '../node_modules/lit-html/lit-html.js';
 class DevLid extends HTMLElement {
 	constructor() {
 		super();
+	}
+
+	update() {
+		render(this.renderTemplate(), this.root);
+	}
+
+	connectedCallback() {
 		this.name = this.getAttribute('name');
 		this.thumbUrl = this.getAttribute('thumb');
 		this.detailUrl = this.getAttribute('url');
 		this.githubName = this.getAttribute('github');
 		this.twitterName = this.getAttribute('twitter');
 		this.devtoName = this.getAttribute('devto');
-
-		// this.root = this.attachShadow({ mode: 'open' });
-
-		render(this.renderTemplate(), this);
+		this.root = this.attachShadow({ mode: 'open' });
+		console.log(this.getAttribute('name'));
+		this.update();
 	}
 
 	renderTemplate() {
@@ -23,7 +29,8 @@ class DevLid extends HTMLElement {
 				}
 				article {
 					color: white;
-					box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+					box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2),
+						0px 5px 5px rgba(0, 0, 0, 0.2);
 					width: 100%;
 					padding-bottom: 66%;
 					position: relative;
@@ -128,7 +135,7 @@ class DevLid extends HTMLElement {
 			</style>
 
 			<article>
-				<input checked type="checkbox" class="cb" id="a" tabindex="0" />
+				<input type="checkbox" class="cb" id="a" tabindex="0" />
 				<label for="a">
 					<img class="lid-image" src="${this.thumbUrl}" alt="" />
 				</label>
