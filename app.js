@@ -5,7 +5,7 @@ import './components/lid-list.js';
 class App extends LitElement {
 	constructor() {
 		super();
-		this.searchTerm = 'DevLids';
+		this.searchTerm = 'Dev-Lids';
 	}
 
 	static get properties() {

@@ -14,7 +14,7 @@ class DevLid extends LitElement {
 			githubName: { type: String },
 			twitterName: { type: String },
 			devtoName: { type: String },
-			isOpen: { type: String }
+			open: { type: Boolean }
 		};
 	}
 
@@ -138,6 +138,7 @@ class DevLid extends LitElement {
 					class="cb"
 					id="lid-${this.name}"
 					tabindex="0"
+					?checked=${this.open}
 				/>
 				<label for="lid-${this.name}">
 					<img class="lid-image" src="${this.thumb}" alt="" />

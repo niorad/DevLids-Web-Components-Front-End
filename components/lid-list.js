@@ -70,6 +70,7 @@ class LidList extends LitElement {
 					.devtoName="${devto}"
 					.url="${url}"
 					.thumb="${thumb}"
+					.open=${false}
 				>
 				</dev-lid>
 			</li>
