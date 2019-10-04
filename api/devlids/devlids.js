@@ -1,4 +1,4 @@
-const fetch = require('./node-fetch.js');
+const fetch = require('node-fetch');
 
 let API_ENDPOINT = 'https://devlids.com/api/';
 
