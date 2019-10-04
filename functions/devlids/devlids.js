@@ -6,9 +6,11 @@ exports.handler = async (event, context) => {
 	let response;
 	let data;
 
+
 	console.log("Function Debug" );
 	console.log("Secret:", process.env.DEVLIDS_TOKEN );
 	console.log("Path:", event.queryStringParameters.path );
+
 
 	try {
 		response = await fetch(
