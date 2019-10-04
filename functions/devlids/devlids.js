@@ -1,8 +1,8 @@
 const fetch = require('node-fetch');
-
-let API_ENDPOINT = 'https://devlids.com/api/';
+const API_ENDPOINT = 'https://devlids.com/api/';
 
 exports.handler = async (event, context) => {
+
 	let response;
 	let data;
 
