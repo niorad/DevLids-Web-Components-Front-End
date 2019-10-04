@@ -1,16 +1,16 @@
-const fetch = require('node-fetch');
+/* eslint-disable */
+// for a full working demo of Netlify Identity + Functions, see https://netlify-gotrue-in-react.netlify.com/
+
+const fetch = require("node-fetch");
 const API_ENDPOINT = 'https://devlids.com/api/';
 
-exports.handler = async (event, context) => {
-
-	let response;
+exports.handler = async function(event, context) {
+  let response;
 	let data;
-
 
 	console.log("Function Debug" );
 	console.log("Secret:", process.env.DEVLIDS_TOKEN );
 	console.log("Path:", event.queryStringParameters.path );
-
 
 	try {
 		response = await fetch(
