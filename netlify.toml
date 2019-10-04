@@ -1,2 +1,2 @@
 [build]
-  functions = "functions_build"
+  functions = "functions/devlids"
