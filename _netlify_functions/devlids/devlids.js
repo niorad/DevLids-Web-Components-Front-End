@@ -1,5 +1,4 @@
 /* eslint-disable */
-// for a full working demo of Netlify Identity + Functions, see https://netlify-gotrue-in-react.netlify.com/
 
 const fetch = require("node-fetch");
 const API_ENDPOINT = 'https://devlids.com/api/';

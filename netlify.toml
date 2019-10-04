@@ -1,2 +1,3 @@
+functions = "_netlify_functions"
 [build]
-  functions = "_netlify_functions"
+	functions = "_netlify_functions_build"
