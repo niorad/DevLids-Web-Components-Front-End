@@ -4,7 +4,7 @@ const fetch = require("./node-fetch.js");
 const API_ENDPOINT = 'https://devlids.com/api/';
 
 exports.handler = async function(event, context) {
-  let response;
+	let response;
 	let data;
 
 	console.log("Function Debug" );
