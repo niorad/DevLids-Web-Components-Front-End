@@ -11,7 +11,7 @@ exports.handler = async (event, context) => {
 			API_ENDPOINT + event.queryStringParameters.path,
 			{
 				headers: {
-					Authorization: 'Basic YXBpQGV4YW1wbGUuY29tOjFxYXkhUUFZ'
+					Authorization: process.env.DEVLIDS_TOKEN
 				}
 			}
 		);
